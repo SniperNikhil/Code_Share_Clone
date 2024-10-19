@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeShare Clone</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Real Time CodeShare App</h1>
+        </div>
+        <div class="expire-time">
+            <span>Expires at 12am daily</span>
+        </div>
+        <div class="header-buttons">
+            {{!-- <button class="btn save-btn">Save Codeshare</button> --}}
+            <button class="btn share-btn" id="share">Share</button>
+            {{!-- <button class="btn login-btn">Log In</button> --}}
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="editor-container">
+            <div class="line-numbers">
+                <pre id="line-numbers">1</pre>
+            </div>
+            <div class="code-editor">
+                <textarea id="code-area"
+                    placeholder="Write or paste code here then share. Anyone you share with will see code as it is typed!">{{param}}</textarea>
+            </div>
+        </div>
+        {{!-- <div class="sidebar">
+            <div class="icon" title="Settings">
+                <span>&#9881;</span>
+            </div>
+            <div class="icon" title="Download">
+                <span>&#8681;</span>
+            </div>
+            <div class="icon" title="Add New">
+                <span>+</span>
+            </div> --}}
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Your shareable link:</p>
+            <a id="share-link" href="sdas"></a>
+            <div class="copy-container">
+                <button id="copy-btn">Click to open</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
