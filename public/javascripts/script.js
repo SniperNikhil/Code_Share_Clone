@@ -39,8 +39,8 @@ socket.on('error', () => {
 
 socket.on('successshare', (filename) => {
     // console.log(filename)
-    document.getElementById('share-link').href = `http://localhost:4001/${filename}`;
-    document.getElementById('share-link').textContent = `http://localhost:4001/${filename}`
+    document.getElementById('share-link').href = `${filename}`;
+    document.getElementById('share-link').textContent = `${filename}`
     document.getElementById('modal').style.display = "flex";
     document.cookie = `filename=${filename}; path=/; max-age=36000`;
 });
